@@ -15,7 +15,7 @@ class Main extends StatelessWidget {
       home: Scaffold(
           appBar: AppBar(
             toolbarHeight: 0,
-            backgroundColor: Colors.blueGrey,
+            backgroundColor: Colors.indigo,
           ),
           body: Welcome_Screen(),
       ),

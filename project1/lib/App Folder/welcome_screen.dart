@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project1/App%20Folder/grid_view/grid_view.dart';
 import 'package:project1/App%20Folder/list_view/list_view.dart';
 import 'package:project1/Models/data_model.dart';
 
@@ -21,7 +22,9 @@ class Welcome_Screen extends StatelessWidget {
             Navigator.push(context, MaterialPageRoute(builder: (context)=>ListPage(listData: data_list,)));
           },child: const Text("List View"),)),
           const SizedBox(height: 20,),
-          SizedBox(width:200,height:40,child: ElevatedButton(onPressed: (){}, child: const Text("Grid View")))
+          SizedBox(width:200,height:40,child: ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>GridPage(listData: data_list,)));
+          }, child: const Text("Grid View")))
         ],
       ),
     );
