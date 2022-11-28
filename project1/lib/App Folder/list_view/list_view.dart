@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:project1/Components/list_card.dart';
 import 'package:project1/Models/data_model.dart';
 
+import '../../Components/list_cardTile.dart';
+
 class ListPage extends StatelessWidget {
   List<CardData> listData;
 
@@ -15,7 +17,7 @@ class ListPage extends StatelessWidget {
       body: ListView.builder(
            itemCount: listData.length,
           itemBuilder: (ctx,index){
-        return ListCard(product: listData[index].title, date: DateTime.now(), desciption: listData[index].description,imgsource: listData[index].leadingImage,);
+        return ListCard(title: listData[index].title, date: DateTime.now(), desciption: listData[index].description,imgsource: listData[index].leadingImage,);
       }),
     );
   }

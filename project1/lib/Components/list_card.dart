@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 class ListCard extends StatelessWidget {
-  String product;
+  String title;
   DateTime date;
   String desciption;
   String imgsource;
-  ListCard({required this.product, required this.date, required this.desciption,required this.imgsource});
+  ListCard({required this.title, required this.date, required this.desciption,required this.imgsource});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class ListCard extends StatelessWidget {
                   Container(
                     alignment: Alignment.topLeft,
                     child: Text(
-                      product,
+                      title,
                       style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600,color: Colors.white70),
                     ),
                   ),
