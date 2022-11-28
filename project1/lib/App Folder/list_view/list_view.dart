@@ -6,7 +6,7 @@ import 'package:project1/Models/data_model.dart';
 import '../../Components/list_cardTile.dart';
 
 class ListPage extends StatelessWidget {
-  List<CardData> listData;
+  List<ProductModel>? listData;
 
   ListPage({required this.listData});
 
@@ -15,9 +15,9 @@ class ListPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text("List View"),toolbarHeight: 50, backgroundColor: Colors.indigo),
       body: ListView.builder(
-           itemCount: listData.length,
+           itemCount: listData?.length,
           itemBuilder: (ctx,index){
-        return ListCard(title: listData[index].title, date: DateTime.now(), desciption: listData[index].description,imgsource: listData[index].leadingImage,);
+        return ListCard(title: listData![index].title.toString().substring(0,10), date: DateTime.now(), desciption: listData![index].description.toString().substring(0,50),imgsource: listData![index].image.toString(),);
       }),
     );
   }

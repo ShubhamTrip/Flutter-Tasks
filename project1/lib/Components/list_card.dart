@@ -45,12 +45,13 @@ class ListCard extends StatelessWidget {
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.circular(20),
-                      child: Image.asset(imgsource,height: 100,width: 100,fit: BoxFit.fill)
+                      child: Image.network(imgsource,height: 100,width: 100,fit: BoxFit.fill)
                     ),
                     Container(
                       padding:EdgeInsets.fromLTRB(20, 10,0,0) ,
+                      width: 250,
                       child: Text(
-                        desciption,
+                        "${desciption}...",
                         style:
                         TextStyle(fontSize: 16, fontWeight: FontWeight.w400,color: Colors.white54),
                       ),

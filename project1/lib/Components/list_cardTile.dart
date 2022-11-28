@@ -20,19 +20,19 @@ class ListTileCard extends StatelessWidget {
             child: ListTile(
               leading: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
-                  child: Image.asset(imgsource,height: 100,width: 100,fit: BoxFit.fill)
+                  child: Image.network(imgsource,height: 100,width: 100,fit: BoxFit.fill)
               ),
               title: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                Text("$title",style: TextStyle(color: Colors.white70)),
+                Text("$title...",style: TextStyle(color: Colors.white70)),
                 Text(
                   DateFormat.yMMMd().format(date),
                   style:
                   TextStyle(fontSize: 14, fontWeight: FontWeight.w600,color: Colors.white70),
                 )
               ],),
-              subtitle: Text("$desciption",style: TextStyle(color: Colors.white54)),
+              subtitle: Text("$desciption...",style: TextStyle(color: Colors.white54)),
             ),
           ),
         ),

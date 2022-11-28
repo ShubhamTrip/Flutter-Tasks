@@ -30,7 +30,7 @@ class GridCard extends StatelessWidget {
                 ),
                 ClipRRect(
                     borderRadius: BorderRadius.circular(20),
-                    child: Image.asset(imgsource,height: 60,width: 100,fit: BoxFit.fill)
+                    child: Image.network(imgsource,height: 60,width: 100,fit: BoxFit.fill)
                 ),
                 Container(
 
