@@ -1,22 +1,23 @@
+import 'package:connectioncheck/App/HomePage.dart';
+import 'package:connectioncheck/Bloc/connectivity_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   runApp(const Main());
 }
 
-class Main extends StatefulWidget {
+class Main extends StatelessWidget {
   const Main({Key? key}) : super(key: key);
 
   @override
-  State<Main> createState() => _MainState();
-}
-
-class _MainState extends State<Main> {
-  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: null,
+    return BlocProvider(
+      create: (context)=>ConnectivityBloc(),
+      child:const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: HomePage(),
+      ),
     );
   }
 }
