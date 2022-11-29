@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
               if(state is InternetConnectedState){
                    return Column(
                      mainAxisAlignment: MainAxisAlignment.center,
-                     children: [
+                     children: const [
                        Icon(Icons.check_circle_outline,size: 80,color: Colors.green,),
                        Text("Connected")
                      ],
@@ -68,7 +68,7 @@ class HomePage extends StatelessWidget {
               else if(state is InternetDisconnectedState){
                     return Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+                      children: const [
                         Icon(Icons.error_outline,size: 80,color: Colors.red,),
                         Text("Disconnected")
                       ],
